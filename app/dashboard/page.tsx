@@ -17,7 +17,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Views Chart + Top Posts */}
-      <div className="grid grid-cols-[1fr_320px] gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-5">
         <ViewsChart />
         <TopPosts />
       </div>
@@ -29,7 +29,7 @@ export default function DashboardPage() {
       <WhyItWorked />
 
       {/* Follower Chart + Engagement Mix */}
-      <div className="grid grid-cols-[1fr_380px] gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-5">
         <FollowerChart />
         <EngagementMix />
       </div>

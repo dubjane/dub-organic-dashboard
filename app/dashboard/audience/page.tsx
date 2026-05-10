@@ -525,7 +525,7 @@ export default function AudiencePage() {
       </div>
 
       {/* Platform follower cards */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <PlatformCard
           platform="tiktok"
           followers={ttFollowers}
@@ -544,7 +544,7 @@ export default function AudiencePage() {
       <FollowerGrowthChart />
 
       {/* Demographics — two columns */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <AgeChart />
         <GenderBreakdown />
       </div>

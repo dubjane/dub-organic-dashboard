@@ -10,16 +10,34 @@ const navItems = [
 { label: 'Settings', href: '/dashboard/settings', icon: '○' },
 ]
 
-export default function Sidebar() {
+interface SidebarProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname()
 
   return (
-    <aside className="w-60 shrink-0 h-screen sticky top-0 bg-[#1E1C1A] border-r border-white/[0.06] flex flex-col z-20">
-      <div className="px-6 pt-8 pb-6 border-b border-white/[0.06]">
+    <aside
+      className={`w-60 shrink-0 h-screen fixed md:sticky top-0 bg-[#1E1C1A] border-r border-white/[0.06] flex flex-col z-40 md:z-20 transition-transform duration-300 ${
+        isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+      }`}
+    >
+      <div className="px-6 pt-8 pb-6 border-b border-white/[0.06] flex items-start justify-between">
         <div className="flex items-center gap-2">
           <span className="font-display text-2xl text-neutral-50 tracking-tight">dub</span>
           <span className="text-[10px] font-body font-semibold uppercase tracking-widest text-neutral-300 mt-1">social</span>
         </div>
+        <button
+          onClick={onClose}
+          className="md:hidden mt-0.5 text-neutral-400 hover:text-neutral-50 transition-colors"
+          aria-label="Close menu"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"/>
+          </svg>
+        </button>
       </div>
 
       <nav className="flex-1 px-3 py-4 space-y-0.5">
@@ -29,6 +47,7 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold font-body transition-all ${
                 isActive
                   ? 'bg-solaris-500/10 text-solaris-600'

@@ -150,7 +150,7 @@ export default function ContentPage() {
       </div>
 
       {/* Stats summary */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
           { label: 'Posts shown',     value: String(posts.length) },
           { label: 'Combined views',  value: formatNumber(totalViews) },
