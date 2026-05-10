@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/jane/dub-organic-dashboard/app/layout":["static/media/b5cdb659843fb3cc.p.ttf","static/media/2ae2e238e3b1c37d.p.otf"]},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":false}';

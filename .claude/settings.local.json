@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/dashboard)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/$\\(ls /Users/jane/dub-organic-dashboard/.next/static/css/)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/app/layout.css?v=1778092937795\")",
+      "Bash(npm install *)"
+    ]
+  }
+}
